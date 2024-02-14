@@ -10,8 +10,8 @@
 </template>
   
 <script>
-import axios from 'axios';
 
+import axiosInstance from '../../services/axios';
 
 export default {
     name: "Task13_16Component",
@@ -42,7 +42,7 @@ export default {
     },
     methods: {
         fetchProduct(productId) {
-            axios.get(`https://dummyjson.com/products/${productId}`)
+            axiosInstance.get(`/products/${productId}`)
                 .then(response => {
                     this.product = response.data;
                 })

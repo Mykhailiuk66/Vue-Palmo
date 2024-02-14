@@ -24,7 +24,7 @@
 
 <script>
 
-import axios from 'axios';
+import axiosInstance from '../../services/axios';
 
 export default {
     name: "Task9_12Component",
@@ -62,7 +62,7 @@ export default {
         }
     },
     mounted() {
-        axios.get('https://dummyjson.com/products')
+        axiosInstance.get('/products')
             .then(response => {
                 this.products = response.data.products;
                 this.updateStockTotal();
