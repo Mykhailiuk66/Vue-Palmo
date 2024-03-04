@@ -1,3 +1,7 @@
+// 9. Асинхронні Дії:
+// Створіть асинхронні дії для взаємодії з API або іншими асинхронними джерелами даних.
+
+
 import { defineStore } from 'pinia';
 
 export const useProductStore = defineStore('product', {

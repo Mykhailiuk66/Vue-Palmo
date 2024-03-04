@@ -1,3 +1,4 @@
+<!-- 8.	Створіть computed property для фільтрації списку об'єктів. -->
 <template>
     <div>
       <input type="text" v-model="searchQuery" placeholder="Пошук">
@@ -32,4 +33,4 @@
     }
   };
   </script>
-  
+  <!--  -->

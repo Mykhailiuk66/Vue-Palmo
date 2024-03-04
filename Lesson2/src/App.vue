@@ -14,11 +14,13 @@
     <br>
     <hr>
 
+    <!-- 5.	Використайте метод для обробки події кліку, який змінює стан інших компонентів. -->
     <h1>5</h1>
     <button @click="switchShow">Переключити видимість</button>
     <Task5Component :show="show" />
     <br>
     <hr>
+    <!--  -->
 
     <h1>6-7</h1>
     <FormComponent />

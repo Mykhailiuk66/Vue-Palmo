@@ -1,3 +1,6 @@
+<!-- 7.	Використовуючи v-bind, динамічно додавайте або видаляйте атрибути елемента 
+(наприклад, disabled, readonly) в залежності від умови. -->
+
 <template>
     <div>
         <button :disabled="isDisabled">Кнопка з динамічним disabled</button>

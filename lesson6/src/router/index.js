@@ -5,6 +5,10 @@ import ProductsComponent from '../components/ProductsComponent.vue'
 import ProfileComponent from '../components/ProfileComponent.vue'
 import { useUserStore } from '@/store/userStore'
 
+// 11. Router:
+// Використайте store для отримання данних про користувача у файлах Roter, наприклад для переадресаціі неавторизованних користувачів
+
+
 const routes = [
   {
     path: "/",

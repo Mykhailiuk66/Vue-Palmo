@@ -1,3 +1,9 @@
+// 6. Комбінація Stores:
+// Створіть кілька stores та спробуйте їх комбінувати, доступаючись до одного store з іншого.
+// 10. Пагінація:
+// Реалізуйте пагінацію зі стороннього API, використовуючи Pinia store.
+
+
 import { defineStore } from 'pinia';
 import { useProductStore } from './productStore';
 

@@ -1,12 +1,15 @@
 <template>
   <h1>Lesson 4</h1>
 
+  <!-- 1. Події користувача та Модіфікатори подій -->
   <TaskOne />
   <hr><br>
 
+  <!-- 2. Динамічні Стилі -->
   <TaskTwo />
   <hr><br>
 
+  <!-- 3. Директива v-for -->
   <TaskThree />
 </template>
 

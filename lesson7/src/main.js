@@ -17,6 +17,8 @@ const vuetify = createVuetify({
 
 const app = createApp(App)
 
+// Глобальна Директива:
+// Реєструйте вашу власну директиву глобально, щоб вона була доступна в усьому додатку.
 app.directive('listen-click', {
   mounted(el) {
     el.addEventListener('click', () => {
@@ -25,7 +27,8 @@ app.directive('listen-click', {
   }
 })
 
-
+// Глобальний Міксін:
+// Створіть глобальний міксін і додайте його глобально в вашому основному файлі main.js або main.ts.
 app.mixin(LogMixin)
 app.use(router).use(vuetify)
 app.mount('#app')

@@ -1,3 +1,7 @@
+<!-- 3. Доступ до Store:
+Виведіть дані зі свого store у компоненті Vue. -->
+
+
 <template>
   <div class="content">
     <p>Count: {{ count }}</p>

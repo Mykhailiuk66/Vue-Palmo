@@ -1,3 +1,4 @@
+<!-- 5.	Використайте метод для обробки події кліку, який змінює стан інших компонентів. -->
 <template>
     <div>
         <p v-if="show">Task5Component</p>
@@ -12,3 +13,4 @@ export default {
 </script>
 
 <style scoped></style>
+<!--  -->

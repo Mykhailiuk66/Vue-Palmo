@@ -1,3 +1,7 @@
+// Налаштуйте базові маршрути для декількох компонентів у вашому додатку
+
+
+
 import { createRouter, createWebHistory } from 'vue-router'
 import UserId from '../components/UserId'
 import ParentComponent from '../components/ParentComponent'
@@ -13,6 +17,7 @@ import FormComponent from '../components/FormComponent'
 import { isAuthenticated, isAdmin } from '@/utils'
 
 const routes = [
+  // Реалізуйте "404 Not Found" маршрут і сторінку, яка відображається, коли користувач переходить на неіснуючий маршрут.
   {
     path: "/:catchAll(.*)",
     name: "not-found",
@@ -23,12 +28,15 @@ const routes = [
     name: 'home',
     component: HomeComponent
   },
+// Створіть маршрут, який використовує динамічний параметр, і виводьте його в компоненті.
+// Налаштуйте маршрут так, щоб параметри шляху передавалися як props до компонента.
   {
     path: '/user/:id',
     name: 'user-id',
     component: UserId,
     props: true
   },
+  // Налаштуйте вкладені маршрути і виведіть дочірній компонент в батьківському компоненті.
   {
     path: '/parent',
     name: 'parent',
@@ -41,11 +49,17 @@ const routes = [
       }
     ]
   },
+  // Реалізуйте програмне перенаправлення між маршрутами за допомогою this.$router.push
   {
     path: '/programmatic-navigation',
     name: 'programmatic-navigation',
     component: ProgrammaticNavigation,
   },
+  // Використовуйте мета-поля маршруту для передачі даних між маршрутами.
+  //   Треба щоб у проєкті було декілька сторінок котрі будуть:
+  //  - Сторінка яка доступна всім
+  //  - Сторінка доступна лише адміністратору
+  //  - Сторінка доступна лише авторизованим користувачам
   {
     path: '/profile',
     name: 'profile',
@@ -76,6 +90,14 @@ const router = createRouter({
   routes,
 })
 
+
+
+// Додайте navigation guards для захисту маршрутів від неавторизованих користувачів.
+
+// Використовувати Vue Router hooks (beforeEach, afterEach) для перевірки автентифікації 
+// користувача і його ролі перед переходом на відповідний маршрут.
+// Якщо користувач спробує отримати доступ до сторінки, до якої у нього немає прав, 
+// він повинен бути перенаправлений на сторінку 404 Not Found Page.
 
 router.beforeEach((to, from, next) => {
   const isAuth = isAuthenticated()

@@ -13,6 +13,9 @@ const vuetify = createVuetify({
   components,
   directives,
 })
+
+// 1. Базова Ініціалізація:
+// Налаштуйте Pinia як стор.
 const pinia = createPinia()
 
 createApp(App).use(router).use(vuetify).use(pinia).mount('#app')
